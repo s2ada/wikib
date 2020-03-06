@@ -9,3 +9,4 @@
     - name: php
     - name: SElinux
     - name: unzip
+    - name: Dépot_package
