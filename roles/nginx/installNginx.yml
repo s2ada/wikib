@@ -1,12 +1,5 @@
 ---
 
-    - name: ping machine cible
-      hosts: wordpress
-      become: yes
-      tasks:
-        - name: ping_machine_cible
-          ping:
-
 #NginX
 #Nginx
         - name: Install Nginx
