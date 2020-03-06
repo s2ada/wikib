@@ -3,5 +3,6 @@
     src: files/md2_01.00.00_PRES.tar.gz
     dest: /appli/LIVR/version1/
 
+
 - name: Copy de wiki_devops
   command: cp -R /appli/LIVR/version1/wiki_devops /appli/projects/wikib/nginx/version1 
