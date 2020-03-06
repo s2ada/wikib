@@ -4,3 +4,15 @@
   become: yes
   roles:
     - name: tools
+
+#Nginx
+- name: Install Nginx
+  package:
+  name: nginx
+  state: present
+
+- name: Start Nginx
+  service:
+  name: nginx
+  state: started
+  enabled: yes
