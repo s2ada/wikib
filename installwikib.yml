@@ -9,3 +9,4 @@
     - name: SElinux
     - name: unzip
     - name: Dépot_package
+    - name: signature
