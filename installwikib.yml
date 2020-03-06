@@ -1,0 +1,6 @@
+---
+- name: installwikib
+  hosts: wiki
+  become: yes
+  roles:
+    - name: tools

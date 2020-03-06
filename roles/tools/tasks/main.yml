@@ -1,0 +1,5 @@
+    - name: install lynx
+      yum:
+        name:
+          - lynx
+        state: present
