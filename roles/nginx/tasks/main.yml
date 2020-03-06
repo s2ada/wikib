@@ -1,9 +1,8 @@
----
-  - name: Install nginx
-  hosts: host.name.ip
-  become: true
+    - name: Install nginx
+      hosts: host.name.ip
+      become: true
 
-  tasks:
+      tasks:
     - name: Add epel-release repo
     yum:
       name: epel-release
