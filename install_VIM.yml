@@ -1,8 +1,0 @@
----
-
-    - name: Installation du serveur
-      hosts: wiki
-      remote_user: devops
-      tasks:
-        - name: installation de Vim
-          yum: name=vim
