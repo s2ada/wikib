@@ -1,8 +1,8 @@
 ---
 
     - name: Installation du serveur
-      hosts: centos_serv
-      remote_user: root
+      hosts: wiki
+      remote_user: devops
       tasks:
         - name: installation de Vim
           yum: name=vim
