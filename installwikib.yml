@@ -3,5 +3,4 @@
   hosts: wiki
   become: yes
   roles:
-    - name: nginx
-    - name: php
+    - name: SELinux
