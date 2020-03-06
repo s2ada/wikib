@@ -1,0 +1,5 @@
+- name: Install required tools
+  yum:
+    name:
+      - unzip
+    state: present
