@@ -3,5 +3,4 @@
   hosts: wiki
   become: yes
   roles:
-    - name: tools
-    - name: nginx 
+    - name: nginx
