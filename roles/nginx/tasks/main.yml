@@ -1,7 +1,6 @@
     - name: Install nginx
       become: true
-
-        tasks:
+      tasks:
       - name: Add epel-release repo
         yum:
           name: epel-release
