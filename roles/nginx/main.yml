@@ -1,5 +1,4 @@
----
-- name: installNginx
-package:
-name: nginx
-state: present
+    - name: installNginx
+      package:
+        name: nginx
+        state: present
