@@ -3,4 +3,4 @@
   hosts: wiki
   become: yes
   roles:
-    - name: SElinux
+    - name: Arborescence
