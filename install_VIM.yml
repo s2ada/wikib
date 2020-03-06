@@ -1,7 +1,7 @@
 ---
 
     - name: Installation du serveur
-      hosts: 192.168.1.41
+      hosts: centos_serv
       remote_user: root
       tasks:
         - name: installation de Vim
