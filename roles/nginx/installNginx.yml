@@ -1,12 +1,21 @@
 ---
-  #NginX
-        - name: Install Nginx
-          package:
-            name: nginx
-            state: present
+
+  - name: ping machine cible
+  hosts: wordpress
+  become: yes
+  tasks:
+    - name: ping_machine_cible
+    ping:
+
+
+      #Nginx
+      - name: Install Nginx
+      package:
+        name: nginx
+        state: present
 
         - name: Start Nginx
-          service:
-            name: nginx
-            state: started
-            enabled: yes
+        service:
+          name: nginx
+          state: started
+          enabled: yes
