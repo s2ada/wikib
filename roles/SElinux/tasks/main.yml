@@ -1,4 +1,4 @@
 - name: Disable SELinux
-  selinux: state=permissive
+  selinux:
     state: disabled
   become: yes
