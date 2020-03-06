@@ -6,7 +6,7 @@
 
 vi /etc/selinux/config
 
-- hosts: localhost
+- hosts: wiki
   tasks:
   - lineinfile:
       path: /etc/selinux/config
