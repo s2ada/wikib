@@ -4,10 +4,13 @@
   become: yes
 
 
-- hosts: srv001
-  become: true
+vi /etc/selinux/config
+
+SELINUX=disabled
+---
+- hosts: localhost
   tasks:
-    - name: Ensure SELinux is disabled
-      selinux:
-        policy: targeted
-        state: disabled
+  - lineinfile:
+      path: /etc/selinux/config
+      regexp: '^SELINUX='
+      line: 'SELINUX=disabled'
