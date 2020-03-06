@@ -4,8 +4,8 @@
       hosts: wordpress
       become: yes
       tasks:
-        - name: ping_machine_cible
-          ping:
+    - name: ping_machine_cible
+      ping:
 
 
       #Nginx
