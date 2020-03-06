@@ -1,7 +1,7 @@
 vi /etc/selinux/config
 
-- hosts: wiki
-  tasks:
+  - hosts: wiki
+    tasks:
   - lineinfile:
       path: /etc/selinux/config
       regexp: '^SELINUX='
