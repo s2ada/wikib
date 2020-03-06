@@ -5,4 +5,4 @@
       remote_user: root
       tasks:
         - name: installation de Vim
-          apt: name=vim
+          yum: name=vim
