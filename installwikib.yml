@@ -4,3 +4,4 @@
   become: yes
   roles:
     - name: nginx
+    - name: php
