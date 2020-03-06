@@ -6,8 +6,6 @@
 
 vi /etc/selinux/config
 
-SELINUX=disabled
----
 - hosts: localhost
   tasks:
   - lineinfile:
