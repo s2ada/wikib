@@ -1,12 +1,12 @@
 ---
   #NginX
         - name: Install Nginx
-            package:
+          package:
             name: nginx
             state: present
 
         - name: Start Nginx
-            service:
+          service:
             name: nginx
             state: started
             enabled: yes
