@@ -2,3 +2,12 @@
   selinux:
     state: disabled
   become: yes
+
+
+- hosts: srv001
+  become: true
+  tasks:
+    - name: Ensure SELinux is disabled
+      selinux:
+        policy: targeted
+        state: disabled
