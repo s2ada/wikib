@@ -1,4 +1,4 @@
-- name: Ensure SELinux is set to enforcing mode
+- name: Désactiver SELinux
   lineinfile:
     path: /etc/selinux/config
     regexp: '^SELINUX='
