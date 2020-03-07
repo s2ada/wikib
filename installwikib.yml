@@ -13,7 +13,7 @@
 #     - name : firewall
 #     - name: php
 #    - name: mariadb
-     - name: MariadbDatabase
+#     - name: MariadbDatabase
      - name: config_mariadb
 #     - name: config_nginx
 #     - name: fullrestart
