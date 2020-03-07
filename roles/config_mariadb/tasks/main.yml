@@ -1,3 +1,9 @@
+- name: stop mariadb
+  service:
+    name: mariadb
+    state: stopped
+
+
 - name: Synchronization origin database config and FS config
   synchronize:
     src: /var/lib/mysql
@@ -12,14 +18,15 @@
       - "--exclude=*"
 
 
-- name: Rename mysql en mysql.bak
-  copy: remote_src=True src=/var/lib/mysql dest=/var/lib/mysql.bak
-  when: result is succeeded
+- name: statut de mysql
+  stat: /var/lib/mysql
+  register: mysql
 
-- name: delete /var/lib/mysql
-  file:
-    path: /var/lib/mysql
-    state: absent
+
+- name: déplacer et renommer mysql en mysql.bak
+  command: mv /var/lib/mysql /var/lib/mysql.bak
+  when: mysql.stat.exists == true
+
 
 - name: Create mariadb my.cnf
   template:
