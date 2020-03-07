@@ -4,19 +4,11 @@
     state: stopped
 
 
-- name: Synchronization origin database config and FS config
+- name: Synchronization database dans le FS
   synchronize:
     src: /var/lib/mysql
-    dest: /appli/projects/wikib/mariadb
-    checksum: yes
-    archive: no
-    links: yes
-    recursive: yes
-    delete: no
-    rsync_opts:
-      - "--include=*.conf"
-      - "--exclude=*"
-
+    dest: rsync://appli/projects/wikib/mariadb
+    
 
 - name: déplacer et renommer mysql en mysql.bak
   command: mv /var/lib/mysql /var/lib/mysql.bak
