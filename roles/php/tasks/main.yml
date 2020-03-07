@@ -13,6 +13,9 @@
       - php-mbstring
       - firewalld
       - php-fpm
+      - php-mariadb
+      - php-xcache
+      - php-pear-MDB2-Driver-mysql
 
 - name: enable service php-fpm and ensure it is not masked
   systemd:

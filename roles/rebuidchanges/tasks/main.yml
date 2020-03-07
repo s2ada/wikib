@@ -1,0 +1,2 @@
+- name: commande rebuildrecentchanges.php
+  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/rebuildrecentchanges.php

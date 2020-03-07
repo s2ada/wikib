@@ -1,0 +1,35 @@
+- name: Synchronization origin database config and FS config
+  synchronize:
+    src: /var/lib/mysql
+    dest: /appli/projects/wikib/mariadb/mysql
+    checksum: yes
+    archive: no
+    links: yes
+    recursive: yes
+    delete: yes
+    rsync_opts:
+      - "--include=*.conf"
+      - "--exclude=*"
+
+
+- name: Rename mysql en mysql.bak
+  copy: remote_src=True src=/var/lib/mysql dest=/var/lib/mysql.bak
+  when: result is succeeded
+
+- name: delete /var/lib/mysql
+  file:
+    path: /var/lib/mysql
+    state: absent
+
+- name: Create mariadb my.cnf
+  template:
+    src: roles/config_mariadb/templates/new_maria_my.cnf.j2
+    dest: /etc/my.cnf
+  notify: restart mariadb
+
+- name: Create symlink for database old new
+  file:
+    path: /appli/projects/wikib/mariadb/mysql
+    dest: /var/lib/mysql
+    state: link
+    force: yes

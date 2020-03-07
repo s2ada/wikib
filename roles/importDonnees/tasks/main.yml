@@ -1,0 +1,2 @@
+- name: commande importDump.php
+  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/importDump.php /appli/projects/wikib/nginx/version1/wiki_devops/Donnees.xml
