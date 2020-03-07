@@ -12,7 +12,7 @@
     archive: no
     links: yes
     recursive: yes
-    delete: yes
+    delete: no
     rsync_opts:
       - "--include=*.conf"
       - "--exclude=*"
