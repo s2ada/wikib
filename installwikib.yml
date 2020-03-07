@@ -4,9 +4,17 @@
   become: yes
   roles:
     - name: Arborescence
-    - name: nginx
-    - name: php
+    - name: signature
     - name: SElinux
     - name: unzip
+    - name : tools
     - name: Dépot_package
-    - name: signature
+    - name: nginx
+    - name : firewall
+    - name: php
+    - name: mariadb
+    - name: MariadbDatabase
+    - name: config_mariadb
+    - name: config_nginx
+    - name: fullrestart
+    -
