@@ -13,7 +13,6 @@
       - php-mbstring
       - firewalld
       - php-fpm
-      - php-mariadb
       - php-xcache
       - php-pear-MDB2-Driver-mysql
 
