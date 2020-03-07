@@ -7,7 +7,7 @@
 - name: Synchronization origin database config and FS config
   synchronize:
     src: /var/lib/mysql
-    dest: /appli/projects/wikib/mariadb/mysql
+    dest: /appli/projects/wikib/mariadb
     checksum: yes
     archive: no
     links: yes
