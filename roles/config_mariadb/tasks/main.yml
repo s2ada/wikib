@@ -18,11 +18,6 @@
       - "--exclude=*"
 
 
-- name: statut de mysql
-  stat: /var/lib/mysql
-  register: mysql
-
-
 - name: déplacer et renommer mysql en mysql.bak
   command: mv /var/lib/mysql /var/lib/mysql.bak
   when: mysql.stat.exists == true
