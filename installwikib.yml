@@ -17,4 +17,8 @@
     - name: config_mariadb
     - name: config_nginx
     - name: fullrestart
-    -
+    - name: installwiki
+    - name: fullrestart
+    - name: importDonnees
+    - name: rebuildchanges
+    - name: importImages
