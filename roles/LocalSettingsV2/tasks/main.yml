@@ -1,0 +1,4 @@
+- name: Créer le nouveau LocalSettings pour la V1.1
+  template:
+    src: roles/LocalSettingsV2/templates/LocalSettings.php.j2
+    dest: /appli/projects/wikib/nginx/version2/wiki_devops_v2/LocalSettings.php

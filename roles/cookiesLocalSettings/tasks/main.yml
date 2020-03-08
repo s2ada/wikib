@@ -7,3 +7,4 @@
   template:
     src: roles/cookiesLocalSettings/templates/LocalSettings.php.j2
     dest: /appli/projects/wikib/nginx/version1/wiki_devops/LocalSettings
+    force: yes

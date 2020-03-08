@@ -1,0 +1,9 @@
+- name: archiver wikib dans wikidata.tgz
+  archive:
+    path: /appli/data
+    dest: /appli/projects/wikib/nginx/version1/wikidata.tgz
+
+- name: commande dumpBackup.php
+  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/dumpBackup.php --full > /appli/data/dump.xml
+
+  

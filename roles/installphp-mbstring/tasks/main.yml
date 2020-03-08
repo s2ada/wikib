@@ -1,0 +1,9 @@
+- name: Install php-mbstring
+  yum:
+    name: php-mbstring
+    state: present
+
+- name: restart php-fpm.service
+  service:
+    name: php-fpm.service
+    state: restarted
