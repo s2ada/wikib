@@ -3,20 +3,22 @@
   hosts: wiki
   become: yes
   roles:
-#    - name: Arborescence
-#    - name: signature
-#    - name: SElinux
-#    - name: unzip
-#    - name : tools
-#    - name: Dépot_package
-#    - name: nginx
-#    - name : firewall
-#    - name: php
-#    - name: config_nginx
-#    - name: mariadb
-#    - name: MariadbDatabase
-    - name: config_mariadb
-    - name: fullrestart
+#     - name: Arborescence
+#     - name: signature
+#     - name: SElinux
+#     - name: unzip
+#     - name : tools
+#     - name: Dépot_package
+#     - name: nginx
+#     - name : firewall
+#     - name: php
+#     - name: config_nginx
+#     - name: reboot
+#     - name: mariadb
+#     - name: MariadbDatabase
+     - name: config_mariadb
+     - name: reboot
+     - name: fullrestart
 #     - name: installwiki
 #     - name: fullrestart
 #     - name: importDonnees
