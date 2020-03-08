@@ -1,4 +1,10 @@
-- name: Désactiver SELinux
+- name: Désactiver temporairement SELinux
+  selinux:
+    state: disabled
+  become: yes
+
+
+- name: Désactiver définitivement SELinux
   lineinfile:
     path: /etc/selinux/config
     regexp: '^SELINUX='
