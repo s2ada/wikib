@@ -1,0 +1,2 @@
+- name: kill processus du port 80
+  command: sudo fuser 80/tcp
