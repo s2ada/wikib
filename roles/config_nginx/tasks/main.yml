@@ -8,7 +8,6 @@
   template:
     src: roles/config_nginx/templates/new_www.conf
     dest: /etc/php-fpm.d/www.conf
-  notify: restart php-fpm
 
 - name: Creer le lien entre dépôt et serveur nginx
   file:
