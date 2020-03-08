@@ -6,11 +6,12 @@
      - name: Arborescence
      - name: signature
      - name: SElinux
+     - name: reboot
      - name: unzip
-     - name : tools
-     - name: Dépot_package
+     - name: tools
+     - name: depot_package1
      - name: nginx
-     - name : firewall
+     - name: firewall
      - name: php
      - name: config_nginx
      - name: reboot
@@ -18,11 +19,16 @@
      - name: MariadbDatabase
      - name: config_mariadb
      - name: reboot
+  #- name: SiPbNginx
      - name: fullrestart
      - name: installwiki
      - name: reboot
+  #- name: SiPbNginx
      - name: fullrestart
      - name: importDonnees
      - name: rebuildchanges
      - name: importImages
      - name: cookiesLocalSettings
+     - name: reboot
+  #- name: SiPbNginx
+     - name: fullrestart
