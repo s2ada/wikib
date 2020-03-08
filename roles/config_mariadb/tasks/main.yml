@@ -4,10 +4,7 @@
     state: stopped
 
 - name: Synchronization database dans le FS
-  synchronize:
-    src: /var/lib/mysql
-    dest: rsync://appli/projects/wikib/mariadb
-    rsync_path: su -c rsync
+    command: rsync -a /var/lib/mysql /appli/projects/wikib/mariadb
 
 - name: déplacer et renommer mysql en mysql.bak
   command: mv /var/lib/mysql /var/lib/mysql.bak
