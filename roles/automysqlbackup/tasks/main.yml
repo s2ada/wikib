@@ -1,0 +1,49 @@
+- name: télécharger automysqlbackup
+  unarchive:
+    src: "{{ automysqlbackup_download_url }}"
+    dest: /tmp
+    creates: /opt/automysqlbackup
+    remote_src: true
+  register: installed
+  tags:
+    - automysqlbackup
+
+- name: Extraire automysqlbackup
+  unarchive: src=/tmp/automysqlbackup.tar.gz
+             dest=/opt/automysqlbackup
+             copy=no
+  changed_when: False
+
+- name: commande install.sh
+  command: /opt/automysqlbackup/./install.sh
+
+
+- name: définir permissions
+  file:
+    path: /opt/automysqlbackup
+    state: touch
+    mode: u+rwx,g+rx,a+rx
+  changed_when: false
+  tags:
+    - automysqlbackup
+
+
+- name: Setup config
+  template:
+      src: 'automysqlbackup.conf'
+      dest: '/etc/automysqlbackup/automysqlbackup.conf'
+      remote_src: yes
+      owner: root
+      group: root
+      mode: '0400'
+
+
+- name: apply host automysqlbackup configuration
+  template:
+    src: automysqlbackup.j2
+    dest: /etc/automysqlbackup/{{ ansible_hostname.lower() }}.conf
+    group: root
+    owner: root
+    mode: "0600"
+  tags:
+    - automysqlbackup
