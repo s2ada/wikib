@@ -1,2 +1,7 @@
+- name: copier Donnees.xml
+  copy:
+    src: files/Donnees.xml
+    dest: /appli/projects/wikib/nginx/version1/wiki_devops/
+
 - name: commande importDump.php
-  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/importDump.php /appli/projects/wikib/nginx/version1/wiki_devops/Donnees.xml
+  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/importDump.php  /appli/projects/wikib/nginx/version1/wiki_devops/Donnees.xml
