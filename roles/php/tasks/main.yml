@@ -21,3 +21,8 @@
     name: php-fpm
     enabled: yes
     masked: no
+
+- name: Remove httpd
+  apt:
+    name: httpd
+    state: absent

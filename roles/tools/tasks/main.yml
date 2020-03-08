@@ -6,3 +6,4 @@
       - rsync
       - firewalld
       - vim
+      - psmisc
