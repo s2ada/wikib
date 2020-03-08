@@ -8,5 +8,5 @@
   mysql_user:
     name: userwikib
     host: localhost
-    password: azerty123
+    password: password
     priv: wikib.*:ALL

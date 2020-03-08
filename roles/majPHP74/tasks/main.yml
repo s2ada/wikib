@@ -37,4 +37,3 @@
     - php74-php-intl
     - php-fpm
   ignore_errors: true
-  notify: restart php-fpm

@@ -25,3 +25,4 @@
      - name: importDonnees
      - name: rebuildchanges
      - name: importImages
+     - name: cookiesLocalSettings
