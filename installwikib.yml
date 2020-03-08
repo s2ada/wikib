@@ -19,9 +19,9 @@
 #     - name: config_mariadb
 #     - name: reboot
 #     - name: fullrestart
-     - name: installwiki
-     - name: reboot
-     - name: fullrestart
+#     - name: installwiki
+#     - name: reboot
+#     - name: fullrestart
      - name: importDonnees
      - name: rebuildchanges
      - name: importImages
