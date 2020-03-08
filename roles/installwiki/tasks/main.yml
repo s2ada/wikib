@@ -4,4 +4,4 @@
   register: stat_result
 
 - name: commande install.php
-  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/install.php --confpath=/usr/share/nginx/html/wikib --dbname=wikib --dbpass=password --globals --dbuser=userwikib --lang=fr --memory-limit=max --pass=MotDePasseAdmin --scriptpath=/wikib wikib Admin
+  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/install.php --confpath=/appli/projects/wikib/nginx/version1/wiki_devops --lang=fr --dbname=wikib --dbpass=password --dbport=3306 --dbserver=localhost --dbuser=userwikib --lang=fr --memory-limit=max --pass=MotDePasseAdmin --scriptpath=/wikib wikib Admin
