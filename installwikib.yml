@@ -3,7 +3,7 @@
   hosts: wiki
   become: yes
   roles:
-#    - name: Arborescence
+    - name: Arborescence
 #    - name: signature
 #     - name: SElinux
 #     - name: unzip
@@ -15,7 +15,7 @@
 #    - name: mariadb
 #     - name: MariadbDatabase
 #     - name: config_mariadb
-     - name: config_nginx
+#     - name: config_nginx
 #     - name: fullrestart
 #     - name: installwiki
 #     - name: fullrestart
