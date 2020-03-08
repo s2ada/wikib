@@ -7,6 +7,7 @@
   synchronize:
     src: /var/lib/mysql
     dest: rsync://appli/projects/wikib/mariadb
+    rsync_path: su -c rsync
 
 - name: déplacer et renommer mysql en mysql.bak
   command: mv /var/lib/mysql /var/lib/mysql.bak
