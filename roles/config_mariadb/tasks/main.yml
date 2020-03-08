@@ -7,7 +7,7 @@
   synchronize:
     src: /var/lib/mysql
     dest: rsync://appli/projects/wikib/mariadb
-  delegate_to: localhost
+  delegate_to: wiki
 
 - name: déplacer et renommer mysql en mysql.bak
   command: mv /var/lib/mysql /var/lib/mysql.bak
