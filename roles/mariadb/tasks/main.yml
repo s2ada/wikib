@@ -6,6 +6,12 @@
     - mariadb-server
     - MySQL-python
 
+- name: enable service mariadb and ensure it is not masked
+  systemd:
+    name: mariadb
+    enabled: yes
+    masked: no
+
 - name: start mariadb
   service:
     name: mariadb
@@ -50,4 +56,10 @@
     - 127.0.0.1
     - ::1
     - localhost
+  when: mysql_new_root_pass.changed
+
+- name: Create /root/.my.cnf
+  template:
+    src: roles/mariadb/templates/my.cnf.j2
+    dest: /root/.my.cnf
   when: mysql_new_root_pass.changed
