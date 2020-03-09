@@ -1,8 +1,0 @@
-- name: Unzip dump_image.tar.gz
-  unarchive:
-    src: files/dump_image.tar.gz
-    dest: /appli/projects/wikib/nginx/version1/data/
-
-
-- name: commande importImages.php
-  command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/importImages.php  /appli/projects/wikib/nginx/version1/data/images/

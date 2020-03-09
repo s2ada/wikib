@@ -7,3 +7,8 @@
   service:
     name: php-fpm
     state: restarted
+
+- name: restart mariadb
+  service:
+    name: mariadb
+    state: restarted
