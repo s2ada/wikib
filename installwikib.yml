@@ -18,18 +18,18 @@
      - name: MariadbDatabase
      - name: config_mariadb
      - name: reboot
-  #- name: SiPbNginx
+     - name: SiPbNginx
      - name: fullrestart
      - name: installwiki
      - name: reboot
-  #- name: SiPbNginx
+     - name: SiPbNginx
      - name: fullrestart
      - name: importDonnees
      - name: rebuildchanges
      - name: importImages
      - name: cookiesLocalSettings
      - name: reboot
-  #- name: SiPbNginx
+     - name: SiPbNginx
      - name: fullrestart
 
 #V2 Migration
