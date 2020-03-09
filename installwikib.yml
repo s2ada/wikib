@@ -20,6 +20,7 @@
      - name: reboot
      - name: SiPbNginx
      - name: fullrestart
+     - name: MariadbDatabase
      - name: installwiki
      - name: reboot
      - name: SiPbNginx
