@@ -1,4 +1,4 @@
-centos_serv ansible_host=192.168.1.44 ansible_user=devops
+centos_serv ansible_host=10.31.2.64 ansible_user=devops
 
 [wiki]
 centos_serv
