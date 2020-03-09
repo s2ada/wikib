@@ -23,6 +23,6 @@
     masked: no
 
 - name: Remove httpd
-  apt:
+  yum:
     name: httpd
     state: absent
