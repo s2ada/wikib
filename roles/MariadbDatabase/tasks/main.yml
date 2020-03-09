@@ -1,6 +1,7 @@
 - name: create mediawiki Mariadb database
   mysql_db:
     name: wikib
+    login_password: None
     state: present
 
 - name : create mediawiki mariadb user

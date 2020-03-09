@@ -3,8 +3,15 @@
     name: mariadb
     state: stopped
 
-- name: Synchronization database dans le FS
-  command: rsync -a /var/lib/mysql /appli/projects/wikib/mariadb
+#- name: Synchronization database dans le FS
+#  command: rsync -a /var/lib/mysql /appli/projects/wikib/mariadb
+
+- name: Synchronization origin database config and FS config
+  synchronize:
+    src: /var/lib/mysql
+    dest: /appli/projects/wikib/mariadb/mysql
+  delegate_to: "{{ inventory_hostname }}"
+
 
 - name: déplacer et renommer mysql en mysql.bak
   command: mv /var/lib/mysql /var/lib/mysql.bak
