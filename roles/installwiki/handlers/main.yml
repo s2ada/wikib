@@ -1,7 +1,10 @@
-- name: restart nginx
+- name: kill processus du port 80
+  command: sudo fuser 80/tcp
+
+- name: start nginx
   service:
     name: nginx
-    state: restarted
+    state: started
 
 - name: restart php-fpm
   service:
