@@ -19,10 +19,6 @@
      #- name: reboot
      #- name: SiPbNginx
      #- name: fullrestart
-     - name: importDonnees
-     - name: rebuildchanges
-     - name: importImages
-     - name: cookiesLocalSettings
      #- name: reboot
      - name: SiPbNginx
      - name: fullrestart
