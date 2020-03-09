@@ -3,17 +3,17 @@
   hosts: wiki
   become: yes
   roles:
-     - name: Arborescence
-     - name: signature
-     - name: SElinux
-     - name: reboot
-     - name: unzip
-     - name: tools
-     - name: depot_package1
-     - name: nginx
-     - name: firewall
-     - name: php
-     - name: config_nginx
+#     - name: Arborescence
+#      - name: signature
+#      - name: SElinux
+#      - name: reboot
+#      - name: unzip
+#      - name: tools
+#      - name: depot_package1
+#      - name: nginx
+#      - name: firewall
+#      - name: php
+#      - name: config_nginx
      - name: mariadb
      - name: MariadbDatabase
      #- name: config_mariadb
