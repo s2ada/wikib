@@ -15,5 +15,13 @@
     state: link
     force: yes
 
+- name: Unconditionally reboot the machine with all defaults
+  reboot:
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+
 #- name: Creer le lien entre dépôt et serveur nginx
 #  command: ln -s /appli/projects/wikib/nginx/version1/#  wiki_devops /usr/share/nginx/html/wikib
