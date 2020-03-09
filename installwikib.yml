@@ -15,8 +15,8 @@
 #      - name: php
 #      - name: config_nginx
      - name: mariadb
-     - name: MariadbDatabase
-     #- name: config_mariadb
+#     - name: MariadbDatabase
+#     - name: config_mariadb
      - name: reboot
      - name: SiPbNginx
      - name: fullrestart
