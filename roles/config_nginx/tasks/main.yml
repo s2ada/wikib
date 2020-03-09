@@ -8,5 +8,12 @@
     src: roles/config_nginx/templates/new_www.conf.j2
     dest: /etc/php-fpm.d/www.conf
 
-- name: Creer le lien entre dépôt et serveur nginx
-  command: ln -s /appli/projects/wikib/nginx/version1/wiki_devops /usr/share/nginx/html/wikib
+- name: Create symlink for de appli vers usr/share/nginx/html old new
+  file:
+    path: /appli/projects/wikib/nginx/version1/wiki_devops
+    dest: /usr/share/nginx/html/wikib
+    state: link
+    force: yes
+
+#- name: Creer le lien entre dépôt et serveur nginx
+#  command: ln -s /appli/projects/wikib/nginx/version1/#  wiki_devops /usr/share/nginx/html/wikib
