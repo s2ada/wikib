@@ -18,10 +18,10 @@
 - name: Unconditionally reboot the machine with all defaults
   reboot:
 
-- name: restart nginx
+- name: start nginx
   service:
     name: nginx
-    state: restarted
+    state: started
 
 #- name: Creer le lien entre dépôt et serveur nginx
 #  command: ln -s /appli/projects/wikib/nginx/version1/#  wiki_devops /usr/share/nginx/html/wikib
