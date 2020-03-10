@@ -20,3 +20,9 @@
   service:
     name: nginx
     state: started
+    
+
+- name: enable NGiNX
+  systemd:
+    name: nginx
+    enabled: started

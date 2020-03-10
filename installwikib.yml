@@ -5,10 +5,10 @@
   roles:
 #     - name: Arborescence
 #     - name: signature
-     - name: SElinux
+#     - name: SElinux
      - name: firewall
-     - name: tools
-     - name: depot_package1
+#     - name: tools
+#     - name: depot_package1
      - name: nginx
      - name: php
      - name: config_nginx
