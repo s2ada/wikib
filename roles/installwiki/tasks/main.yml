@@ -8,8 +8,13 @@
 - name: commande install.php
   command: php /appli/projects/wikib/nginx/version1/wiki_devops/maintenance/install.php --confpath=/appli/projects/wikib/nginx/version1/wiki_devops --lang=fr --dbname=wikib --dbpass=password --dbport=3306 --dbserver=localhost --dbuser=userwikib --lang=fr --memory-limit=max --pass=password --scriptpath=/wikib wikib Admin
 
-- name: kill processus du port 80
-  command: sudo fuser 80/tcp
+#- name: kill processus du port 80
+#  command: sudo fuser 80/tcp
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+
 
 - name: restart php-fpm
   service:
@@ -56,7 +61,23 @@
     src: roles/installwiki/templates/php.ini.j2
     dest: /etc/php.ini
 
-- name: start mariadb
+#- name: start mariadb
+#  service:
+#    name: mariadb
+#    state: started
+
+- name: restart nginx
+  service:
+    name: nginx
+    state: restarted
+
+
+- name: restart php-fpm
+  service:
+    name: php-fpm
+    state: restarted
+
+- name: restart mariadb
   service:
     name: mariadb
-    state: started
+    state: restarted

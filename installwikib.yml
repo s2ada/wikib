@@ -16,7 +16,7 @@
      - name: MariadbDatabase
      - name: SiPbNginx
      - name: installwiki
-     - name: reboot
+     #- name: reboot
      #- name: reboot
      #- name: SiPbNginx
      #- name: fullrestart
