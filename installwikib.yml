@@ -11,7 +11,7 @@
 #     - name: depot_package1
      - name: nginx
      - name: php
-     - name: config_nginx
+#     - name: config_nginx
 #     - name: mariadb
 #     - name: MariadbDatabase
 #     - name: SiPbNginx
