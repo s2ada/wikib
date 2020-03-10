@@ -11,11 +11,11 @@
 #     - name: depot_package1
      - name: nginx
      - name: php
-#     - name: config_nginx
+     - name: config_nginx
 #     - name: mariadb
 #     - name: MariadbDatabase
 #     - name: SiPbNginx
-     - name: installwiki
+#     - name: installwiki
      #- name: reboot
      #- name: SiPbNginx
      #- name: fullrestart
