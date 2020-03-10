@@ -20,8 +20,3 @@
     name: php-fpm
     enabled: yes
     masked: no
-
-- name: Remove httpd
-  yum:
-    name: httpd
-    state: absent

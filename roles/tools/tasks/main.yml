@@ -8,3 +8,8 @@
       - firewalld
       - vim
       - psmisc
+
+- name: Remove httpd
+  yum:
+    name: httpd
+    state: absent
