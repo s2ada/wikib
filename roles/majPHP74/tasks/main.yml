@@ -1,24 +1,10 @@
-- name: Remove php
-  yum:
-    name: php
-    state: absent
-
-- name: Install remi repo
-  yum:
-    name: http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-    state: present
-
-- name: configure repo
-  command: yum-config-manager --enable remi-php74
-
 - name: install php74
   yum:
     name: "{{ item }}"
     enablerepo: remi-php74
     state: present
   loop:
-    - php
-    - php
+    - php74
     - php-mcrypt
     - php-cli
     - php-gd
