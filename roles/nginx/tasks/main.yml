@@ -1,19 +1,29 @@
+- name: Install EPEL repo.
+  yum:
+    name: https://dl.fedoraproject.org/pub/epel/epel-release-latest-{{ ansible_distribution_major_version }}.noarch.rpm
+    state: present
+
+- name: Install nginx
+  yum:
+    name: nginx
+    state: present
+
 - name: Install nginx
   yum:
     name: nginx
     state: present
 
 
-#- name: change UID user nginx
-#  user:
-#    name: nginx
-#    uid: 1121
+- name: change UID user nginx
+  user:
+    name: nginx
+    uid: 1121
 
 
-#- name: change gid user nginx
-#  group:
-#    name: nginx
-#    gid: 1120
+- name: change gid user nginx
+  group:
+    name: nginx
+    gid: 1120
 
 
 - name: Start NGiNX
