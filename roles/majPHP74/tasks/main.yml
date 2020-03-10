@@ -1,39 +1,31 @@
-- name: Install epel release
-  package:
-    name: epel-release
+- name: Remove php
+  yum:
+    name: php
+    state: absent
+
+- name: Install remi repo
+  yum:
+    name: "{{ remi_repo_url }}"
     state: present
-    update_cache: yes
 
-- name: copier le repo à installer
-  copy:
-     src: files/remi-release-7.rpm
-     dest: /home/webadm/repo.rpm
+- name: configure repo
+  command: yum-config-manager --enable remi-php74
 
-- name: Install rpm
-  command: rpm -Uvh /home/webadm/repo.rpm
-  ignore_errors: true
-
-- name: install repo
+- name: install php74
   yum:
     name: "{{ item }}"
     enablerepo: remi-php74
     state: present
   loop:
     - php
-    - php-xml
+    - php
     - php-mcrypt
     - php-cli
-    - php-curl
-    - php-ldap
-    - php-soap
-    - php-xmlrpc
-    - php-mbstring
-    - php-json
     - php-gd
-    - php-zip
-    - php-fileinfo
-    - php-mcrypt
+    - php-curl
     - php-mysql
-    - php74-php-intl
+    - php-ldap
+    - php-zip 
+    - php-fileinfo
+    - php-xml
     - php-fpm
-  ignore_errors: true
