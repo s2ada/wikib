@@ -1,17 +1,2 @@
 - name: install php74
-  yum:
-    name: "{{ item }}"
-    enablerepo: remi-php74
-    state: present
-  loop:
-    - php7.4
-    - php7.4-mcrypt
-    - php7.4-cli
-    - php7.4-gd
-    - php7.4-curl
-    - php7.4-mysql
-    - php7.4-ldap
-    - php7.4-zip
-    - php7.4-fileinfo
-    - php7.4-xml
-    - php7.4-fpm
+  command: yum install php74
