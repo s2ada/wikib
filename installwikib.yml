@@ -14,7 +14,7 @@
      - name: config_nginx
      - name: mariadb
      - name: MariadbDatabase
-     - name: SiPbNginx
+#     - name: SiPbNginx
      - name: installwiki
      #- name: reboot
      #- name: SiPbNginx
