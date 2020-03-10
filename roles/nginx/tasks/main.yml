@@ -4,16 +4,16 @@
     state: present
 
 
-- name: change UID user nginx
-  user:
-    name: nginx
-    uid: 1121
+#- name: change UID user nginx
+#  user:
+#    name: nginx
+#    uid: 1121
 
 
-- name: change gid user nginx
-  group:
-    name: nginx
-    gid: 1120
+#- name: change gid user nginx
+#  group:
+#    name: nginx
+#    gid: 1120
 
 
 - name: Start NGiNX
