@@ -11,5 +11,5 @@
   notify: restart php-fpm
 
 
-- name: Create symlink for de appli vers usr/share/nginx/html old new
-  command: ln -s /appli/projects/wikib/nginx/version1/wiki_devops /usr/share/nginx/html/wikib
+#- name: Create symlink for de appli vers usr/share/nginx/html old new
+#  command: ln -s /appli/projects/wikib/nginx/version1/wiki_devops /usr/share/nginx/html/wikib
